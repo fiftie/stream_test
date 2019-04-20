@@ -8,6 +8,9 @@ app.use(express.static(path.join(__dirname,'stream')));
 app.get('/' , function(req, res){
   res.sendFile(__dirname + '/index.html');
 });
+app.get('/test' , function(req, res){
+  res.sendFile(__dirname + '/test.htm');
+});
 
 http.listen(PORT, function(){
   console.log('server listening. Port:' + PORT);
